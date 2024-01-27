@@ -23,20 +23,20 @@
 <body>
 
 <!--NAV MENU-->    
-<nav class="navbar navbar-expand-lg top-navbar" data-bs-theme="dark">
+<nav id="navMenu" class="navbar navbar-expand-lg top-navbar" data-bs-theme="dark">
     <div class="container">
-        <a class="navbar-brand" href="#"><b><i class="bi bi-stars"></i> <i class="fa-solid fa-mug-hot"></i> DWISIGN</b></a>
+        <a href="#section1" class="navbar-brand" href="#"><b><i class="bi bi-stars"></i> <i class="fa-solid fa-mug-hot"></i> DWISIGN</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav nav-pills ms-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-briefcase-fill"></i> Portfolio
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Website</a></li>
+                    <li><a class="dropdown-item" href="#section2">Website</a></li>
                     <li><a class="dropdown-item" href="#">Mobile Apps</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Other</a></li>
@@ -55,8 +55,10 @@
 <!--END NAV MENU--> 
 
 
+<div class="wrapper" data-bs-spy="scroll" data-bs-target="#navMenu" data-bs-smooth-scroll="true">
+
 <!--Hero Section-->
-<div class="hero-section">
+<div class="hero-section" id="section1">
     <div class="container">
         <div class="hero-content">
                 <img
@@ -75,30 +77,34 @@
 
 
 <!--Portfolio Section-->
-<div class="portfolio-section">
+<div class="portfolio-section" id="section2">
     <div class="container">
         <div class="portfolio-items">
             <h2 class="text-center">PORTFOLIO</h2><br>
             <div class="row gx-5 gy-5">
                 <div class="col-lg-4">
-                    <div class="portfolio-box box-red" data-bs-toggle="modal" data-bs-target="#modalRed">
-
+                    <div class="portfolio-box" data-bs-toggle="modal" data-bs-target="#modalRed">
+                        <img src="assets/cabin.png" width="100%"/>
+                        <div class="overlay"><i class="bi bi-plus-circle"></i></div>
                     </div>
                     <div class="modal fade" id="modalRed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                           <div class="modal-content">
                             <div class="modal-header">
+                              <h4>Modal Red</h4>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Modal Red</h1>
+                              <img src="assets/cabin.png" width="100%"/><br><br>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea, obcaecati consectetur neque dolorem nam quam qui aperiam maxime, perspiciatis, reiciendis necessitatibus? Atque, vitae recusandae. Suscipit voluptas voluptates illo dolore?</p>
+                              <button class="btn btn-warning" data-bs-dismiss="modal">Cancel</button>
                             </div>
                           </div>
                         </div>
                     </div> 
                 </div>
                 <div class="col-lg-4">
-                    <div class="portfolio-box box-tosca" data-bs-toggle="modal" data-bs-target="#modalTosca">
+                    <div class="portfolio-box box-background" style="background: url(assets/circus-edit.jpg);" data-bs-toggle="modal" data-bs-target="#modalTosca">
 
                     </div>
                     <div class="modal fade" id="modalTosca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -115,23 +121,71 @@
                     </div>  
                 </div>
                 <div class="col-lg-4">
-                    <div class="portfolio-box box-black">
-
+                    <div class="portfolio-box" data-bs-toggle="modal" data-bs-target="#modalBlack">
+                        <img src="assets/circus.png" width="100%"/>
+                    </div>
+                    <div class="modal fade" id="modalBlack" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Modal Black</h1>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="portfolio-box box-blue">
-
+                    <div class="portfolio-box" data-bs-toggle="modal" data-bs-target="#modalBlue">
+                        <img src="assets/circus-edit.jpg" width="100%"/>
+                    </div>
+                    <div class="modal fade" id="modalBlue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Modal Blue</h1>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="portfolio-box box-dark-blue">
-
+                    <div class="portfolio-box" data-bs-toggle="modal" data-bs-target="#modalDarkBlue">
+                        <img src="assets/safe.png" width="100%"/>
+                    </div>
+                    <div class="modal fade" id="modalDarkBlue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Modal Dark Blue</h1>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="portfolio-box box-brown">
-
+                    <div class="portfolio-box" data-bs-toggle="modal" data-bs-target="#modalBrown">
+                        <img src="assets/submarine.png" width="100%"/>
+                    </div>
+                    <div class="modal fade" id="modalBrown" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Modal Brown</h1>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,7 +193,7 @@
     </div>
 </div>
 
-
+</div>
 
 
 
